@@ -1,6 +1,6 @@
 package br.com.junitstudies;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; // Import dos métodos do Assertions, dispensando uso de 'Assertions.assert...'
 
 import java.time.LocalDate;
 
@@ -31,6 +31,7 @@ class PessoaTest {
 	void validarSeObjetoEstaNulo() {
 		Pessoa pessoa = null;
 		Assertions.assertNull(pessoa);
+		
 		pessoa = new Pessoa("Luciano", LocalDate.now());
 		Assertions.assertNotNull(pessoa);
 	}
