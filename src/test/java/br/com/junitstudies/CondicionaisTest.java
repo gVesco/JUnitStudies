@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
-import org.junit.jupiter.api.condition.EnabledIf;
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.JRE;
@@ -14,7 +13,7 @@ import org.junit.jupiter.api.condition.OS;
 
 class CondicionaisTest {
 
-	// caso Assumptions.assumeTrue retorne FALSE, ignorá o teste atual e passará para o próximo
+	// caso Assumptions.assumeTrue retorne FALSE, ignora o teste atual e passará para o próximo
 	
 	@Test
 	void validarAlgoSomenteParaUsuario() {
@@ -41,9 +40,9 @@ class CondicionaisTest {
 	}
 	
 	@Test
-	@EnabledForJreRange(min = JRE.JAVA_9, max = JRE.JAVA_21) // validar algo apenas para JRE desejada
+	@EnabledForJreRange(min = JRE.JAVA_9, max = JRE.JAVA_18) // validar algo apenas para JRE desejada
 	void validarAlgoSomenteParaJREEspecifica() {
-		assertEquals(5, 5 + 5);
+		assertEquals(10, 5 + 5);
 	}
 
 
